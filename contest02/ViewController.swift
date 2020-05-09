@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var paperView: C02PaperView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func sliderMoved(_ sender: UISegmentedControl) {
+        paperView.pageNum = sender.selectedSegmentIndex
+        print(sender.selectedSegmentIndex)
+        paperView.setNeedsDisplay()
+    }
 
 }
 

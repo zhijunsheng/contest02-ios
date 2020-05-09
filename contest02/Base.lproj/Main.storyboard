@@ -23,16 +23,35 @@
                                     <constraint firstAttribute="width" secondItem="lfL-Vz-djq" secondAttribute="height" multiplier="1:1" id="Hb5-dI-urf"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KmX-6r-qVS">
+                                <rect key="frame" x="20" y="854" width="728" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pL1-dV-LQ4"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="C02 – Q1"/>
+                                    <segment title="C02 – Q2"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="KVq-2y-D7d"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.71251605308219179" green="0.49114404965753422" blue="0.25684931506849318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.71251605309999999" green="0.49114404969999997" blue="0.25684931509999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KmX-6r-qVS" secondAttribute="bottom" constant="120" id="9eU-dT-YnM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KmX-6r-qVS" secondAttribute="trailing" constant="20" id="Jbm-Zw-KSb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfL-Vz-djq" secondAttribute="trailing" constant="20" id="SUQ-6J-twt"/>
                             <constraint firstItem="lfL-Vz-djq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bZh-sQ-2mY"/>
+                            <constraint firstItem="KmX-6r-qVS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gIx-bR-ViX"/>
                             <constraint firstItem="lfL-Vz-djq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lIo-6E-CXG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="paperView" destination="lfL-Vz-djq" id="Sdp-tc-ddE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
