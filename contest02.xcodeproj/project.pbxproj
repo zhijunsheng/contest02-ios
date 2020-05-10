@@ -14,6 +14,7 @@
 		73A7F62B246439BD00F6D7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A7F62A246439BD00F6D7BD /* Assets.xcassets */; };
 		73A7F62E246439BD00F6D7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A7F62C246439BD00F6D7BD /* LaunchScreen.storyboard */; };
 		73A7F639246439BD00F6D7BD /* contest02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7F638246439BD00F6D7BD /* contest02Tests.swift */; };
+		E710033F246639CC000F1F3D /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E710033E246639CC000F1F3D /* BoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		73A7F634246439BD00F6D7BD /* contest02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contest02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A7F638246439BD00F6D7BD /* contest02Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contest02Tests.swift; sourceTree = "<group>"; };
 		73A7F63A246439BD00F6D7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E710033E246639CC000F1F3D /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				73A7F621246439BB00F6D7BD /* AppDelegate.swift */,
 				73A7F623246439BB00F6D7BD /* SceneDelegate.swift */,
+				E710033E246639CC000F1F3D /* BoardView.swift */,
 				73A7F625246439BB00F6D7BD /* ViewController.swift */,
 				73A7F627246439BB00F6D7BD /* Main.storyboard */,
 				73A7F62A246439BD00F6D7BD /* Assets.xcassets */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A7F626246439BB00F6D7BD /* ViewController.swift in Sources */,
+				E710033F246639CC000F1F3D /* BoardView.swift in Sources */,
 				73A7F622246439BB00F6D7BD /* AppDelegate.swift in Sources */,
 				73A7F624246439BB00F6D7BD /* SceneDelegate.swift in Sources */,
 			);
