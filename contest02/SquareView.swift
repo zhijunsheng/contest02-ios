@@ -39,22 +39,17 @@ class SquareView: UIView {
         
         pencil1.stroke()
         
-        let pencil2 = UIBezierPath(arcCenter: CGPoint(x: 100, y: 200), radius: 175, startAngle: CGFloat.pi * 1.9, endAngle: CGFloat.pi * 0.1, clockwise: true)
-        
         #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
-        pencil2.stroke()
         
-        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 125, y: 525), radius: 175, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        UIBezierPath(arcCenter: CGPoint(x: 100, y: 200), radius: 175, startAngle: CGFloat.pi * 1.9, endAngle: CGFloat.pi * 0.1, clockwise: true).stroke()
         
-        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
-        pencil3.stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 125, y: 525), radius: 175, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 525, y: 525), radius: 275, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).stroke()
         
-        let pencil6 = UIBezierPath(arcCenter: CGPoint(x: 525, y: 525), radius: 275, startAngle: CGFloat.pi * 0, endAngle: CGFloat.pi * 2, clockwise: false)
-        
-        #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1).setStroke()
-        pencil6.stroke()
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setFill()
     
+        UIBezierPath(arcCenter: CGPoint(x: 270, y: 425), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 270, y: 625), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).fill()
+        
     }
-    
-
 }
