@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  contest02
+//  Contest02
 //
-//  Created by ethan on 2020/5/7.
-//  Copyright © 2020 ethan. All rights reserved.
+//  Created by Grace Huang on 5/10/20.
+//  Copyright © 2020 Grace Huang. All rights reserved.
 //
 
 import UIKit

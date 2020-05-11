@@ -1,15 +1,15 @@
 //
-//  contest02Tests.swift
-//  contest02Tests
+//  Contest02Tests.swift
+//  Contest02Tests
 //
-//  Created by ethan on 2020/5/7.
-//  Copyright © 2020 ethan. All rights reserved.
+//  Created by Grace Huang on 5/10/20.
+//  Copyright © 2020 Grace Huang. All rights reserved.
 //
 
 import XCTest
-@testable import contest02
+@testable import Contest02
 
-class contest02Tests: XCTestCase {
+class Contest02Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
