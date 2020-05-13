@@ -9,10 +9,12 @@
 import UIKit
 
 class CanvasView: UIView {
-
+    var flag = -23
     
     override func draw(_ rect: CGRect) {
-        we2()
+        if flag == 1 {
+            we2()
+        }
     }
     func we2() {
             
