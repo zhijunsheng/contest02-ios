@@ -44,19 +44,21 @@ class C02PaperView: UIView {
     }
     
     func contest02Q2() {
-        let rulerLine = UIBezierPath()
-        rulerLine.move(to: CGPoint(x: 50, y: 100))
-        rulerLine.addLine(to: CGPoint(x: bounds.width - 50, y: 100))
-        rulerLine.stroke()
-        for i in -100...50 {
-            let a = (bounds.width - 100) / 2
-            let b = (bounds.width - 300) / 2
-            let x = b + CGFloat(i * 5)
-            let y = sqrt(a * a + x * x * b * b / (a * a) - x * x - b * b)
-            let point = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + x, y: 500 - y), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-            point.fill()
+        for i in -125...125 {
+            let a: CGFloat = 250
+            let b: CGFloat = (bounds.width - 300) / 2
+            let x: CGFloat = b + CGFloat(i) * 3.68
+            let y2: CGFloat = a * a + x * x * b * b / (a * a) - x * x - b * b
+            if y2 > 0 {
+                let y: CGFloat = sqrt(y2)
+                let point = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + x, y: 500 - y), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+                point.fill()
+                let point1 = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + x, y: 500 + y), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+                point1.fill()
+            }
         }
-
+        UIBezierPath(arcCenter: CGPoint(x: 150 - (500 - (bounds.width - 300)) / 2, y: 500), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: (500 - (bounds.width - 300)) / 2 + bounds.width - 150, y: 500), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         for i in 1...10 {
             let compassLine0 = UIBezierPath()
             let compassLine1 = UIBezierPath()
@@ -70,33 +72,12 @@ class C02PaperView: UIView {
         let point = UIBezierPath(arcCenter: CGPoint(x: 150, y: 500), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         point.fill()
         let point1 = UIBezierPath(arcCenter: CGPoint(x: bounds.width - 150, y: 500), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-        
         point1.fill()
         
-        
-           
-           let points: [CGPoint] = [CGPoint(x: 130.5, y: 454.0),
-                                    CGPoint(x: 130.5, y: 546.5),
-                                    CGPoint(x: 189.5, y: 409.5),
-                                    CGPoint(x: 189.0, y: 594.5),
-                                    CGPoint(x: 247.5, y: 387.5),
-                                    CGPoint(x: 248.0, y: 616.5),
-                                    CGPoint(x: 304.0, y: 373.0),
-                                    CGPoint(x: 308.0, y: 627.0),
-                                    CGPoint(x: 364.0, y: 370.0),
-                                    CGPoint(x: 364.5, y: 630.5),
-                                    CGPoint(x: 425.0, y: 375.0),
-                                    CGPoint(x: 423.0, y: 628.5),
-                                    CGPoint(x: 481.0, y: 389.0),
-                                    CGPoint(x: 482.5, y: 619.0),
-                                    CGPoint(x: 541.0, y: 410.0),
-                                    CGPoint(x: 541.0, y: 595.0),
-                                    CGPoint(x: 599.0, y: 453.5),
-                                    CGPoint(x: 598.5, y: 548.5)]
-           for point in points {
-               let something = UIBezierPath()
-               something.addArc(withCenter: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-               something.fill()
-           }
-       }
+        let rulerLine = UIBezierPath()
+        rulerLine.move(to: CGPoint(x: 114, y: 25))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 114, y: 25))
+        UIColor.black.setStroke()
+        rulerLine.stroke()
+    }
 }
