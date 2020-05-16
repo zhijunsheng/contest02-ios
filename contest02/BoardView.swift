@@ -23,17 +23,20 @@ class BoardView: UIView {
     
     func drawProblem1() {
         let line = UIBezierPath()
-        line.move(to: CGPoint(x: 200, y: 400))
-        line.addLine(to: CGPoint(x: 450, y: 400))
+        line.move(to: CGPoint(x: 150, y: 650))
+        line.addLine(to: CGPoint(x: 550, y: 650))
+        line.lineWidth = 3
         line.stroke()
         
-        let dot = UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-        dot.fill()
+        UIBezierPath(arcCenter: CGPoint(x: 360, y: 550), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+       
+        #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
+        UIBezierPath(arcCenter: CGPoint(x: 360 + 100, y: 550), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         
-        let line1 = UIBezierPath()
-        line1.move(to: CGPoint(x: 200, y: 300))
-        line1.addLine(to: CGPoint(x: 450, y: 300))
-        line1.stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 360 - 100, y: 550), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 360, y: 600), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
         
     }
     
