@@ -9,9 +9,36 @@
 import UIKit
 
 class BoardView: UIView {
+    
+    var flag = 1
+
 
     override func draw(_ rect: CGRect) {
+        if flag == 1 {
+            drawProblem1()
+        } else if flag == 2 {
+            drawProblem2()
+        }
+    }
+    
+    func drawProblem1() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 200, y: 400))
+        line.addLine(to: CGPoint(x: 450, y: 400))
+        line.stroke()
         
+        let dot = UIBezierPath(arcCenter: CGPoint(x: 300, y: 300), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        dot.fill()
+        
+        let line1 = UIBezierPath()
+        line1.move(to: CGPoint(x: 200, y: 300))
+        line1.addLine(to: CGPoint(x: 450, y: 300))
+        line1.stroke()
+        
+    }
+    
+    
+    func drawProblem2() {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 200, y: 100))
         line.addLine(to: CGPoint(x: 450, y: 100))
@@ -59,7 +86,6 @@ class BoardView: UIView {
         
         let arc2 = UIBezierPath(arcCenter: CGPoint(x: 450, y: 400), radius: 25 + 7, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         arc2.stroke()
-    
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,3 +96,4 @@ class BoardView: UIView {
     
 
 }
+
