@@ -18,11 +18,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func problem1(_ sender: Any) {
-        
+        squareView.problemIndex = 1
+        squareView.setNeedsDisplay()
     }
     
     @IBAction func problem2(_ sender: Any) {
-        squareView.problemIndex = 1
+        squareView.problemIndex = 2
         squareView.setNeedsDisplay()
     }
 }

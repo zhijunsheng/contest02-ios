@@ -9,7 +9,7 @@
 import UIKit
 
 class SquareView: UIView {
-    var problemIndex = 0
+    var problemIndex = 2
     
     override func draw(_ rect: CGRect) {
         
@@ -18,7 +18,7 @@ class SquareView: UIView {
         }
         
         if problemIndex == 2 {
-            
+            drawProblem1()
         }
     }
     
@@ -26,6 +26,22 @@ class SquareView: UIView {
         let first = touches.first!
         let finger = first.location(in: self)
         print("\(finger.x)", "\(finger.y)")
+    }
+    
+    func drawProblem1() {
+        let pencil = UIBezierPath()
+        
+        pencil.move(to: CGPoint(x: 100, y: 650))
+        pencil.addLine(to: CGPoint(x: 600, y: 650))
+        
+        pencil.move(to: CGPoint(x: 325, y: 500))
+        pencil.addLine(to: CGPoint(x: 375, y: 550))
+        
+        pencil.move(to: CGPoint(x: 375, y: 500))
+        pencil.addLine(to: CGPoint(x: 325, y: 550))
+        
+        pencil.stroke()
+        
     }
     
     func drawProblem2()  {
@@ -117,4 +133,6 @@ class SquareView: UIView {
         UIBezierPath(arcCenter: CGPoint(x: 115, y: 563.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).fill()
         
     }
+    
+    
 }
