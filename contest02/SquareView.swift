@@ -29,19 +29,30 @@ class SquareView: UIView {
     }
     
     func drawProblem1() {
-        let pencil = UIBezierPath()
+        let pencil1 = UIBezierPath()
         
-        pencil.move(to: CGPoint(x: 100, y: 650))
-        pencil.addLine(to: CGPoint(x: 600, y: 650))
+        pencil1.move(to: CGPoint(x: 100, y: 650))
+        pencil1.addLine(to: CGPoint(x: 600, y: 650))
         
-        pencil.move(to: CGPoint(x: 325, y: 500))
-        pencil.addLine(to: CGPoint(x: 375, y: 550))
+        pencil1.move(to: CGPoint(x: 325, y: 500))
+        pencil1.addLine(to: CGPoint(x: 375, y: 550))
         
-        pencil.move(to: CGPoint(x: 375, y: 500))
-        pencil.addLine(to: CGPoint(x: 325, y: 550))
+        pencil1.move(to: CGPoint(x: 375, y: 500))
+        pencil1.addLine(to: CGPoint(x: 325, y: 550))
         
-        pencil.stroke()
+        pencil1.stroke()
         
+        let pencil2 = UIBezierPath()
+        
+        pencil2.move(to: CGPoint(x: 150, y: 575))
+        pencil2.addLine(to: CGPoint(x: 550, y: 575))
+        
+        #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).setStroke()
+        pencil2.stroke()
+        
+        let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 350, y: 525), radius: 75, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        
+        pencil3.stroke()
     }
     
     func drawProblem2()  {
