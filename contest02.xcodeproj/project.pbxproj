@@ -81,8 +81,8 @@
 		73A7F620246439BB00F6D7BD /* contest02 */ = {
 			isa = PBXGroup;
 			children = (
-				73A7F621246439BB00F6D7BD /* AppDelegate.swift */,
 				73A7F623246439BB00F6D7BD /* SceneDelegate.swift */,
+				73A7F621246439BB00F6D7BD /* AppDelegate.swift */,
 				E710033E246639CC000F1F3D /* BoardView.swift */,
 				73A7F625246439BB00F6D7BD /* ViewController.swift */,
 				73A7F627246439BB00F6D7BD /* Main.storyboard */,

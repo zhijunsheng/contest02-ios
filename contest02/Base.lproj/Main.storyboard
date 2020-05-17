@@ -22,6 +22,24 @@
                                     <constraint firstAttribute="width" secondItem="Ux0-aU-7v4" secondAttribute="height" multiplier="1:1" id="aPZ-kd-Lwb"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsQ-5x-EDb">
+                                <rect key="frame" x="20" y="756" width="248" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="80"/>
+                                <state key="normal" title="O.1"/>
+                                <connections>
+                                    <action selector="showOption1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rbt-L7-XcB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX1-U7-90t">
+                                <rect key="frame" x="276" y="756" width="248" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="80"/>
+                                <state key="normal" title="O.2"/>
+                                <connections>
+                                    <action selector="showOption2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NOs-6Z-0kF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -31,6 +49,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="Ux0-aU-7v4" id="EgW-Ab-Tde"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

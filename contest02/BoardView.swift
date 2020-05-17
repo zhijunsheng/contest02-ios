@@ -1,14 +1,30 @@
 import UIKit
 
 class BoardView: UIView {
-
+    var flag: Int = 2
+    
+    
     override func draw(_ rect: CGRect) {
         // Drawing code
-         challenge8()
+         
 //        let p1 = UIBezierPath()
 //        p1.move(to: CGPoint(x: 38, y: 234))
 //        p1.addLine(to: CGPoint(x: 238, y: 434))
 //        p1.stroke()
+        if flag == 1 {
+            challenge8()
+        } else if flag == 2 {
+            challenge9()
+        } else {
+            
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch = touches.first!
+        let touchLocation = touch.location(in: self)
+        print("\(touchLocation.x), \(touchLocation.y)")
     }
     
     private func drawLetter(_ letter: String, x: CGFloat, y: CGFloat, color: UIColor, width: CGFloat, height: CGFloat, fontSize: CGFloat, family: String) {
@@ -93,5 +109,91 @@ class BoardView: UIView {
             bowl.addLine(to: answerPointsBox[i + 1])
             bowl.stroke()
         }
+    }
+    
+    func challenge9() {
+        let rulerLegend = UIBezierPath()
+        rulerLegend.move(to: CGPoint(x: 314, y: 514))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 614))
+        
+        rulerLegend.move(to: CGPoint(x: 314, y: 614))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 514))
+        
+        rulerLegend.move(to: CGPoint(x: 314, y: 214))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 314))
+        
+        rulerLegend.move(to: CGPoint(x: 314, y: 314))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 214))
+        
+        rulerLegend.move(to: CGPoint(x: 121.5, y: 678))
+        rulerLegend.addLine(to: CGPoint(x: bounds.width - 121.5, y: 678))
+        rulerLegend.lineWidth = 6.25
+        rulerLegend.stroke()
+        
+        let lineLength: CGFloat = 485
+        
+        let helperPoint = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 + 121.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint.fill()
+        
+        let trianglePath1_1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: lineLength / 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath1_1.stroke()
+        
+        let trianglePath1_2 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: lineLength / 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath1_2.stroke()
+        
+        let helperPoint2 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 + 171.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint2.fill()
+        
+        let trianglePath2_1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: lineLength / 2 + 50, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath2_1.stroke()
+        
+        let trianglePath2_2 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: lineLength / 2 - 50, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath2_2.stroke()
+        
+        let helperPoint3 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 + 221.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint3.fill()
+        
+        let trianglePath3_1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: lineLength / 2 + 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath3_1.stroke()
+        
+        let trianglePath3_2 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: lineLength / 2 - 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath3_2.stroke()
+        
+        let helperPoint4 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 + 271.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint4.fill()
+        
+        let trianglePath4_1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: lineLength / 2 + 150, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath4_1.stroke()
+        
+        let trianglePath4_2 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: lineLength / 2 - 150, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath4_2.stroke()
+        
+        let helperPoint5 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 + 71.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint5.fill()
+        
+        let trianglePath5_1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: lineLength / 2 - 50, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath5_1.stroke()
+        
+        let trianglePath5_2 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: lineLength / 2 + 50, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath5_2.stroke()
+        
+        let helperPoint6 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 + 21.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint6.fill()
+        
+        let trianglePath6_1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: lineLength / 2 - 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath6_1.stroke()
+        
+        let trianglePath6_2 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: lineLength / 2 + 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trianglePath6_2.stroke()
+        
+        let helperPoint7 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 - 28.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
+        helperPoint7.fill()
     }
 }
