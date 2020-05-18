@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func acd(_ sender: Any) {
+        canvasView.flag = 2
+        canvasView.setNeedsDisplay()
+
+    }
 }
 
 

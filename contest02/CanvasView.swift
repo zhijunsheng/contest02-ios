@@ -14,6 +14,8 @@ class CanvasView: UIView {
     override func draw(_ rect: CGRect) {
         if flag == 1 {
             we2()
+        } else if flag == 2 {
+            problem()
         }
     }
     func we2() {
@@ -174,5 +176,25 @@ class CanvasView: UIView {
             #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
             ee14.fill()
         }
+    }
+    func problem() {
+        let awe = UIBezierPath(arcCenter: CGPoint(x: 124, y:300), radius: 3, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1).setFill()
+        awe.fill()
+        
+        let awe1 = UIBezierPath(arcCenter: CGPoint(x: 324, y:300), radius: 3, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1).setFill()
+        awe1.fill()
+        
+        let pencil = UIBezierPath()
+        pencil.move(to: CGPoint(x: 54, y: 700))
+        pencil.addLine(to: CGPoint(x: 394, y: 700))
+        pencil.stroke()
+        
+        let awe12 = UIBezierPath(arcCenter: CGPoint(x: 124, y:300), radius: 70, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        awe12.stroke()
+        
+        let awe13 = UIBezierPath(arcCenter: CGPoint(x: 324, y:300), radius: 270, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        awe13.stroke()
     }
 }
