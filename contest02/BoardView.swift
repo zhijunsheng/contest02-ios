@@ -37,6 +37,16 @@ class BoardView: UIView {
         
         UIBezierPath(arcCenter: CGPoint(x: 360, y: 600), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         
+        UIBezierPath(arcCenter: CGPoint(x: 284, y: 570.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 436, y: 570), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        let parallel = UIBezierPath()
+        parallel.move(to: CGPoint(x: 170, y: 570))
+        parallel.addLine(to: CGPoint(x: 550, y: 570))
+        parallel.stroke()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 360, y: 550), radius: 80, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).stroke()
         
     }
     
