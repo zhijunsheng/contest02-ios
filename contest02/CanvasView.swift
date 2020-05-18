@@ -196,5 +196,14 @@ class CanvasView: UIView {
         
         let awe13 = UIBezierPath(arcCenter: CGPoint(x: 324, y:300), radius: 270, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
         awe13.stroke()
+        
+        
+        
+        let awe123567 = UIBezierPath(arcCenter: CGPoint(x: 124, y:300), radius: 130, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        awe123567.stroke()
+        
+        let awe134567 = UIBezierPath(arcCenter: CGPoint(x: 324, y:300), radius: 210, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false)
+        awe134567.stroke()
+
     }
 }
