@@ -195,5 +195,24 @@ class BoardView: UIView {
         let helperPoint7 = UIBezierPath(arcCenter: CGPoint(x: lineLength / 2 - 28.5, y: 678), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         #colorLiteral(red: 0.07707575709, green: 0.1131002083, blue: 0.4635964632, alpha: 1).setFill()
         helperPoint7.fill()
+        
+        let answerPiontBox: [CGPoint] = [
+            CGPoint(x: 503, y: 575.5),
+            CGPoint(x: 545.5, y: 496),
+            CGPoint(x: 558, y: 419.5),
+            CGPoint(x: 546, y: 330),
+            CGPoint(x: 510, y: 255),
+            CGPoint(x: 368.5, y: 171),
+            CGPoint(x: 233, y: 250),
+            CGPoint(x: 188.5, y: 337),
+            CGPoint(x: 173.5, y: 417),
+            CGPoint(x: 184.5, y: 493),
+            CGPoint(x: 220.5, y: 572)
+        ]
+        
+        for answerPiont in answerPiontBox {
+            let anwserpointDraw = UIBezierPath(arcCenter: answerPiont, radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            anwserpointDraw.fill()
+        }
     }
 }
