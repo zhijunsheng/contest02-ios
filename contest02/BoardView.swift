@@ -73,12 +73,60 @@ class BoardView: UIView {
         
         UIBezierPath(arcCenter: CGPoint(x: 569.5, y: 379.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         
+        UIBezierPath(arcCenter: CGPoint(x: 141.5, y: 360.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 578, y: 360), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 131, y: 338), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 586.5, y: 338), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 122.5, y: 320.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 596, y: 321.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 114.5, y: 298.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 605.5, y: 301), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 108, y: 280.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 612.5, y: 281), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 99, y: 261), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 619.5, y: 259.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 92.5, y: 239), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 628, y: 240), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 84.5, y: 220.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 635, y: 220.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 79, y: 199.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 641, y: 201.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 71, y: 181), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 649, y: 179), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 65, y: 159.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 655.5, y: 158.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 57, y: 139.5), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 662, y: 138), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
         let parallel = UIBezierPath()
-        parallel.move(to: CGPoint(x: 100, y: 380))
-        parallel.addLine(to: CGPoint(x: 620, y: 380))
+        parallel.move(to: CGPoint(x: 30, y: 140))
+        parallel.addLine(to: CGPoint(x: 690, y: 140))
         parallel.stroke()
         
-        UIBezierPath(arcCenter: CGPoint(x: 360, y: 550), radius: 270, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).stroke()
+        UIBezierPath(arcCenter: CGPoint(x: 360, y: 550), radius: 510, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).stroke()
         
     }
     
