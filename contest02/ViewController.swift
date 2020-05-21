@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var canvasView: CanvasView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func problem1(_ sender: Any) {
+        canvasView.flag = .problem1
+        canvasView.setNeedsDisplay()
+    }
+    
+    
+    @IBAction func problem2(_ sender: Any) {
+        canvasView.flag = .problem2
+        canvasView.setNeedsDisplay()
+    }
+    
+    
 }
 

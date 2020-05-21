@@ -10,9 +10,15 @@ import UIKit
 
 class CanvasView: UIView {
 
-    
+    var flag: Problems = Problems.problem1
+
     override func draw(_ rect: CGRect) {
-        question1()
+        switch flag {
+        case .problem1:
+            question1()
+        case .problem2:
+            question2()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,7 +48,7 @@ class CanvasView: UIView {
         #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
         
         
-        for i in 0..<7 {
+        for i in -4..<13 {
 //        let i = 1
         
             parallel.move(to: CGPoint(x: 0, y: 520 - distance * CGFloat(i)))
@@ -61,9 +67,18 @@ class CanvasView: UIView {
             mark(x: 330 - b, y: 520 - distance * CGFloat(i))
             mark(x: 330 + b, y: 520 - distance * CGFloat(i))
         }
-        
-        
     }
+    
+    func question2() {
+        let pen = UIBezierPath()
+        mark(x: 300, y: 500)
+        mark(x: 500, y: 500)
+        
+        pen.move(to: CGPoint(x: 100, y: 100))
+        pen.addLine(to: CGPoint(x: 400, y: 100))
+        pen.stroke()
+    }
+    
     
     func mark(x: CGFloat, y: CGFloat) {
         let pen = UIBezierPath()

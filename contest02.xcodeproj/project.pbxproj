@@ -14,6 +14,7 @@
 		A3E3AEE62468E32A00927BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E3AEE52468E32A00927BA7 /* Assets.xcassets */; };
 		A3E3AEE92468E32A00927BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E3AEE72468E32A00927BA7 /* LaunchScreen.storyboard */; };
 		A3E3AEF42468E32A00927BA7 /* Contest02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E3AEF32468E32A00927BA7 /* Contest02Tests.swift */; };
+		A3F162F024770FF1002295C4 /* Problems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F162EF24770FF1002295C4 /* Problems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A3E3AEEF2468E32A00927BA7 /* Contest02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Contest02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E3AEF32468E32A00927BA7 /* Contest02Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contest02Tests.swift; sourceTree = "<group>"; };
 		A3E3AEF52468E32A00927BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F162EF24770FF1002295C4 /* Problems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A3E3AEE52468E32A00927BA7 /* Assets.xcassets */,
 				A3E3AEE72468E32A00927BA7 /* LaunchScreen.storyboard */,
 				A3E3AEEA2468E32A00927BA7 /* Info.plist */,
+				A3F162EF24770FF1002295C4 /* Problems.swift */,
 			);
 			path = Contest02;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3E3AEE12468E32800927BA7 /* ViewController.swift in Sources */,
+				A3F162F024770FF1002295C4 /* Problems.swift in Sources */,
 				A3E3AEDF2468E32800927BA7 /* AppDelegate.swift in Sources */,
 				A3D4BF2E246DE7DD008EBFF9 /* CanvasView.swift in Sources */,
 			);
