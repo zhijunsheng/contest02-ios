@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag: Problems = Problems.problem1
+    var flag: Problems = Problems.problem2
 
     override func draw(_ rect: CGRect) {
         switch flag {
@@ -71,12 +71,46 @@ class CanvasView: UIView {
     
     func question2() {
         let pen = UIBezierPath()
-        mark(x: 300, y: 500)
-        mark(x: 500, y: 500)
+        let compass = UIBezierPath()
+        let compass2 = UIBezierPath()
+        
+        mark(x: 250, y: 500)
+        mark(x: 450, y: 500)
         
         pen.move(to: CGPoint(x: 100, y: 100))
         pen.addLine(to: CGPoint(x: 400, y: 100))
+        
+        pen.move(to: CGPoint(x: 200, y: 95))
+        pen.addLine(to: CGPoint(x: 200, y: 105))
+        
+        #colorLiteral(red: 0.1037014052, green: 0.04392455518, blue: 0.04877308756, alpha: 1).setStroke()
         pen.stroke()
+        
+        // 25
+        compass.addArc(withCenter: CGPoint(x: 250, y: 500), radius: 100, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
+        
+        compass.addArc(withCenter: CGPoint(x: 450, y: 500), radius: 200, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
+        
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        compass.stroke()
+        mark(x: 275, y: 405)
+        mark(x: 275, y: 598)
+        
+        mark(x: 425, y: 405)
+        mark(x: 425, y: 598)
+        
+        //
+        compass2.addArc(withCenter: CGPoint(x: 250, y: 500), radius: 75, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
+        
+        compass2.addArc(withCenter: CGPoint(x: 450, y: 500), radius: 225, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
+        #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).setStroke()
+        compass2.stroke()
+    
+        mark(x: 464, y: 430)
+        mark(x: 464, y: 580)
+        
+        mark(x: 240, y: 430)
+        mark(x: 240, y: 580)
     }
     
     
