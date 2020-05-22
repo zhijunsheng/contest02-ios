@@ -63,6 +63,7 @@ class SquareView: UIView {
             pencil3.stroke()
         }
         
+        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setFill()
         UIBezierPath(arcCenter: CGPoint(x: 350, y: 525), radius: CGFloat(325), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise:true).stroke()
         UIBezierPath(arcCenter: CGPoint(x: 295, y: 576), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
         UIBezierPath(arcCenter: CGPoint(x: 407, y: 576), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
