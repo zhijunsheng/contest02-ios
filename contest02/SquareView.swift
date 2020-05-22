@@ -9,7 +9,7 @@
 import UIKit
 
 class SquareView: UIView {
-    var problemIndex = 2
+    var problemIndex = 0
     
     override func draw(_ rect: CGRect) {
         
@@ -53,12 +53,17 @@ class SquareView: UIView {
         pencil2.stroke()
         
         for i in 0 ... 10 {
-            pencil2.move(to: CGPoint(x: 50, y: 375 - i * 25))
-            pencil2.addLine(to: CGPoint(x: 650, y: 375 - i * 25))
+            pencil2.move(to: CGPoint(x: 0, y: 375 - i * 25))
+            pencil2.addLine(to: CGPoint(x: 725, y: 375 - i * 25))
             pencil2.stroke()
         }
         
-            UIBezierPath(arcCenter: CGPoint(x: 350, y: 525), radius: CGFloat(325), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).stroke()
+        for i in 0 ... 8 {
+            let pencil3 = UIBezierPath(arcCenter: CGPoint(x: 350, y: 525), radius: CGFloat(325 + i * 25), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+            pencil3.stroke()
+        }
+        
+        UIBezierPath(arcCenter: CGPoint(x: 350, y: 525), radius: CGFloat(325), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise:true).stroke()
         UIBezierPath(arcCenter: CGPoint(x: 295, y: 576), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
         UIBezierPath(arcCenter: CGPoint(x: 407, y: 576), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
         UIBezierPath(arcCenter: CGPoint(x: 255, y: 550), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
@@ -77,12 +82,38 @@ class SquareView: UIView {
         UIBezierPath(arcCenter: CGPoint(x: 535.5, y: 451.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
         UIBezierPath(arcCenter: CGPoint(x: 134.5, y: 402.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
         UIBezierPath(arcCenter: CGPoint(x: 567, y: 402.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
-        UIBezierPath(arcCenter: CGPoint(x: 90.5, y: 378), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
-        UIBezierPath(arcCenter: CGPoint(x: 609.5, y: 378), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
-        UIBezierPath(arcCenter: CGPoint(x: 74, y: 353), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
-        UIBezierPath(arcCenter: CGPoint(x: 623.5, y: 353), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 119, y: 377), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 581, y: 377), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 106.5, y: 353), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 593, y: 353), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 95.5, y: 326), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 605, y: 326), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 82.5, y: 302), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 619, y: 302), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 71, y: 278), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 632, y: 278), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 59.5, y: 253), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 641, y: 253), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 50, y: 228), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 651, y: 228), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 38.5, y: 201.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 663, y: 201.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 30, y: 178), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 672, y: 178), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 22, y: 151.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 681.5, y: 151.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 12, y: 127.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        UIBezierPath(arcCenter: CGPoint(x: 690, y: 127.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
         
+        UIBezierPath(arcCenter: CGPoint(x: 350, y: 587.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).fill()
     }
+    //x = 350
+    //y = 525
+    //x = 350
+    //y = 650
+    // 650 - 525 = 125
+    //125 / 2 = 62.5
+    //525 + 62.5 = 587.5
     
     func drawProblem2()  {
     
@@ -172,7 +203,7 @@ class SquareView: UIView {
         UIBezierPath(arcCenter: CGPoint(x: 115, y: 491.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).fill()
         UIBezierPath(arcCenter: CGPoint(x: 115, y: 563.5), radius: 5, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: false).fill()
         
+        
     }
-    
     
 }
