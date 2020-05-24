@@ -13,7 +13,7 @@ class C02PaperView: UIView {
     
     override func draw(_ rect: CGRect) {
         if pageNum == 0 {
-            contest02Q1()
+            contest02Q1_1()
         } else if pageNum == 1 {
             contest02Q2()
         }
@@ -38,6 +38,22 @@ class C02PaperView: UIView {
             rulerLine.move(to: CGPoint(x: 350 + a, y: 600 - (h + b) - 50))
             rulerLine.addLine(to: CGPoint(x: 350 + a, y: 600))
             let ansPoint = UIBezierPath(arcCenter: CGPoint(x: 350 + a, y: 600 - (h + b)), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            ansPoint.fill()
+        }
+        rulerLine.stroke()
+    }
+    
+    func contest02Q1_1() {
+        let rulerLine = UIBezierPath()
+        let h: CGFloat = 50
+        rulerLine.move(to: CGPoint(x: 100, y: 600))
+        rulerLine.addLine(to: CGPoint(x: bounds.width - 100, y: 600))
+        let qPoint = UIBezierPath(arcCenter: CGPoint(x: 350, y: 550), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        qPoint.fill()
+        for i in -35...40 {
+            let x = 10 * CGFloat(i)
+            let y: CGFloat = (x * x + h * h) / (2 * h)
+            let ansPoint = UIBezierPath(arcCenter: CGPoint(x: 350 + x, y: 600 - y), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             ansPoint.fill()
         }
         rulerLine.stroke()
