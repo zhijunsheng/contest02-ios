@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  contest02
 //
-//  Created by ethan on 2020/5/7.
-//  Copyright © 2020 ethan. All rights reserved.
+//  Created by Peter Shi on 2020/5/7.
+//  Copyright © 2020 Peter Shi. All rights reserved.
 //
 
 import UIKit

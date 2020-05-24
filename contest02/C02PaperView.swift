@@ -3,13 +3,13 @@
 //  contest02
 //
 //  Created by Peter Shi on 2020-05-08.
-//  Copyright © 2020 ethan. All rights reserved.
+//  Copyright © 2020 Peter Shi. All rights reserved.
 //
 
 import UIKit
 
 class C02PaperView: UIView {
-    var pageNum = 1
+    var pageNum = 0
     
     override func draw(_ rect: CGRect) {
         if pageNum == 0 {
