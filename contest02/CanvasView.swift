@@ -45,7 +45,7 @@ class CanvasView: UIView {
         pen.lineWidth = 3
         pen.stroke()
         
-        #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1).setStroke()
+        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
         
         
         for i in -4..<13 {
@@ -64,57 +64,45 @@ class CanvasView: UIView {
             let a: CGFloat = distance * CGFloat(i + 1)
             let b: CGFloat = sqrt(c * c - a * a)
 
-            mark(x: 330 - b, y: 520 - distance * CGFloat(i))
-            mark(x: 330 + b, y: 520 - distance * CGFloat(i))
+            mark(x: 330 - b, y: 520 - distance * CGFloat(i), color: .blue)
+            mark(x: 330 + b, y: 520 - distance * CGFloat(i), color: .blue)
         }
     }
     
     func question2() {
         let pen = UIBezierPath()
-        let compass = UIBezierPath()
-        let compass2 = UIBezierPath()
+        let a: CGFloat = 150
+        let b: CGFloat = 100
         
-        mark(x: 250, y: 500)
-        mark(x: 450, y: 500)
+        mark(x: 250, y: 500, color: .blue)
+        mark(x: 450, y: 500, color: .blue)
         
         pen.move(to: CGPoint(x: 100, y: 100))
         pen.addLine(to: CGPoint(x: 400, y: 100))
         
-        pen.move(to: CGPoint(x: 200, y: 95))
-        pen.addLine(to: CGPoint(x: 200, y: 105))
-        
         #colorLiteral(red: 0.1037014052, green: 0.04392455518, blue: 0.04877308756, alpha: 1).setStroke()
         pen.stroke()
         
-        // 25
-        compass.addArc(withCenter: CGPoint(x: 250, y: 500), radius: 100, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
+        for i in 0..<18 {
+            let x: CGFloat = CGFloat(i) * 18
+            let m: CGFloat = (a * a - x * b) / a
+            let n: CGFloat = x - b
+            let y: CGFloat = sqrt(m * m - n * n)
+            
+            mark(x: 350 + x, y: 500 - y, color: .red)
+            mark(x: 350 - x, y: 500 - y, color: .red)
+            
+            mark(x: 350 + x, y: 500 + y, color: .red)
+            mark(x: 350 - x, y: 500 + y, color: .red)
+        }
         
-        compass.addArc(withCenter: CGPoint(x: 450, y: 500), radius: 200, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
+        mark(x: 500, y: 500, color: .red)
+        mark(x: 200, y: 500, color: .red)
         
-        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
-        compass.stroke()
-        mark(x: 275, y: 405)
-        mark(x: 275, y: 598)
-        
-        mark(x: 425, y: 405)
-        mark(x: 425, y: 598)
-        
-        //
-        compass2.addArc(withCenter: CGPoint(x: 250, y: 500), radius: 75, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
-        
-        compass2.addArc(withCenter: CGPoint(x: 450, y: 500), radius: 225, startAngle:  0 * CGFloat.pi, endAngle:  2 * CGFloat.pi, clockwise: true)
-        #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).setStroke()
-        compass2.stroke()
-    
-        mark(x: 464, y: 430)
-        mark(x: 464, y: 580)
-        
-        mark(x: 240, y: 430)
-        mark(x: 240, y: 580)
     }
     
     
-    func mark(x: CGFloat, y: CGFloat) {
+    func mark(x: CGFloat, y: CGFloat, color: UIColor) {
         let pen = UIBezierPath()
         pen.move(to: CGPoint(x: x - 10, y: y - 10))
         pen.addLine(to: CGPoint(x: x + 10, y: y + 10))
@@ -122,7 +110,7 @@ class CanvasView: UIView {
         pen.move(to: CGPoint(x: x + 10, y: y - 10))
         pen.addLine(to: CGPoint(x: x - 10, y: y + 10))
         
-        #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
+        color.setStroke()
         pen.lineWidth = 3
         pen.stroke()
     }
