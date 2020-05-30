@@ -20,6 +20,7 @@ class BoardView: UIView {
         }
         
         smartSolution8()
+        smartSolution9()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -240,5 +241,30 @@ class BoardView: UIView {
             let anwserPointDraw = UIBezierPath(arcCenter: answerPoint, radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             anwserPointDraw.fill()
         }
+    }
+    
+    func smartSolution9() {
+        /*
+         let a = (l - yb/l)
+         let A = (y - b)
+         x = sqrt(a * a + A * A)
+         */
+        let lineLength: CGFloat = 485
+        let l: CGFloat = lineLength/2
+        let b: CGFloat = 300/2
+        
+        #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1).setFill()
+        for i in 0..<106 {
+            let y: CGFloat = -550 + CGFloat(i) * 20
+            let a: CGFloat = (l - y * b/l)
+            let A: CGFloat = (y - b)
+            let x: CGFloat = sqrt(a * a - A * A)
+            let Y: CGFloat = 414 + y
+            let rPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            rPoint.fill()
+            let lPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 - x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+            lPoint.fill()
+        }
+        
     }
 }
