@@ -21,8 +21,31 @@ class CanvasView: UIView {
             contest022()
         }
 
+        contest0212()
         
+    }
+    
+    func contest0212() {
+        let line = UIBezierPath()
+        line.move(to: CGPoint(x: 100, y: 700))
+        line.addLine(to: CGPoint(x: 600, y: 700))
+        line.stroke()
         
+        let point = UIBezierPath(arcCenter: CGPoint(x: 400, y: 600), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
+        point.fill()
+        
+        let h: CGFloat = 100
+        UIColor.red.setFill()
+        for i in 0 ..< 100 {
+            let b: CGFloat = CGFloat(100 + i * 5)
+            let a: CGFloat = sqrt(2 * b * h - h * h)
+            let x: CGFloat = 400 - a
+            let y: CGFloat = 700 - b
+            
+            UIBezierPath(arcCenter: CGPoint(x: x, y: y), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        }
+        
+        //a^2 = 2bh - hh
     }
     
     func contest0022() {
