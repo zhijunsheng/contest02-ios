@@ -30,6 +30,35 @@ class CanvasView: UIView {
         
         drawLine(fromX: 587, fromY: 470, toX: 410, toY: 510, color: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1))
         drawLine(fromX: 587, fromY: 470, toX: 587, toY: 650, color: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1))
+        
+        drawLine(fromX: 10, fromY: 390, toX: 800, toY: 390, color: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))
+        
+        drawLine(fromX: 219, fromY: 453, toX: 410, toY: 510, color: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))
+        drawLine(fromX: 219, fromY: 453, toX: 219, toY: 650, color: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))
+        
+        drawLine(fromX: 602, fromY: 453, toX: 410, toY: 510, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
+        drawLine(fromX: 602, fromY: 453, toX: 602, toY: 650, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
+        
+        drawLine(fromX: 205, fromY: 432, toX: 410, toY: 510, color: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1))
+        drawLine(fromX: 205, fromY: 432, toX: 205, toY: 650, color: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1))
+        
+        drawLine(fromX: 616, fromY: 432, toX: 410, toY: 510, color: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1))
+        drawLine(fromX: 616, fromY: 432, toX: 616, toY: 650, color: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1))
+        
+        drawLine(fromX: 191, fromY: 411, toX: 410, toY: 510, color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
+        drawLine(fromX: 191, fromY: 411, toX: 191, toY: 650, color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
+        
+        drawLine(fromX: 630, fromY: 411, toX: 410, toY: 510, color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
+        drawLine(fromX: 630, fromY: 411, toX: 630, toY: 650, color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
+        
+        drawLine(fromX: 179, fromY: 394, toX: 410, toY: 510, color: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
+        drawLine(fromX: 179, fromY: 394, toX: 179, toY: 650, color: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
+        
+        drawLine(fromX: 643, fromY: 391, toX: 410, toY: 510, color: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))
+        drawLine(fromX: 643, fromY: 391 , toX: 643, toY: 650, color: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))
+        
+        drawCircle(x: 410, y: 510, radius: 240, color: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1))
+        drawCircle(x: 410, y: 510, radius: 260, color: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1))
     }
     
     func drawProblem2() {
