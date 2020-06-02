@@ -236,20 +236,12 @@ class BoardView: UIView {
             CGPoint(x: 184.5, y: 493),
             CGPoint(x: 220.5, y: 572)
         ]
-        #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1).setFill()
+        #colorLiteral(red: 0.8548025489, green: 0.2509347796, blue: 0.4772728682, alpha: 1).setFill()
         for answerPoint in answerPointBox {
             let anwserPointDraw = UIBezierPath(arcCenter: answerPoint, radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             anwserPointDraw.fill()
         }
-    }
-    
-    func smartSolution9() {
-        /*
-         let a = (l - yb/l)
-         let A = (y - b)
-         x = sqrt(a * a + A * A)
-         */
-        let lineLength: CGFloat = 485
+        
         let l: CGFloat = lineLength/2
         let b: CGFloat = 300/2
         
@@ -265,6 +257,18 @@ class BoardView: UIView {
             let lPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 - x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             lPoint.fill()
         }
+        
+        let bPoint = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564 + (lineLength - 300)/2), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        bPoint.fill()
+    }
+    
+    func smartSolution9() {
+        /*
+         let a = (l - yb/l)
+         let A = (y - b)
+         x = sqrt(a * a + A * A)
+         */
+        
         
     }
 }
