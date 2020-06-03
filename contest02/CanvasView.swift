@@ -1,10 +1,29 @@
 import UIKit
 class CanvasView: UIView {
     override func draw(_ rect: CGRect) {
+//        option1n1()
         option2n1()
         option2n2()
         option2n3()
+        option2n4()
     }
+    func option1n1() {
+        let line1 = UIBezierPath()
+        line1.move(to: CGPoint(x: 182, y: 364))
+        line1.addLine(to: CGPoint(x: 546, y: 364))
+        line1.lineWidth = 10
+        line1.stroke()
+        
+        let point1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: 10, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        point1.lineWidth = 10
+        point1.stroke()
+        point1.fill()
+    }
+    /*
+    r=(x^2+h^2)÷(2h)
+    */
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let first = touches.first!
         let fingerLocation = first.location(in: self)
@@ -156,5 +175,33 @@ class CanvasView: UIView {
         answerLine8.lineWidth = 10
         #colorLiteral(red: 0, green: 0.4094622462, blue: 0.02624202768, alpha: 1).setStroke()
         answerLine8.stroke()
+    }
+    func option2n4() {
+        let a: CGFloat = 182
+        let b: CGFloat = 92
+        for i in -20...20 {
+            let x: CGFloat = CGFloat(i * 15)
+            let m: CGFloat = a-x*b/a
+            let n: CGFloat = x-b
+            let y: CGFloat = sqrt(m*m-n*n)
+            let answerPointX: CGFloat = x+364 // add r 0,182,364,546,728
+            let answerPointY: CGFloat = 364-y-100
+            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 10, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true).fill()
+        }
+        for i in -20...20 {
+            let x: CGFloat = CGFloat(i * 15)
+            let m: CGFloat = a-x*b/a
+            let n: CGFloat = x-b
+            let y: CGFloat = sqrt(m*m-n*n)
+            let answerPointX: CGFloat = x+364 // add r 0,182,364,546,728
+            let answerPointY: CGFloat = 264+y
+            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 10, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true).fill()
+        }
+        // 150，160，
+        UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: 15, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        
+        
+        
+        //y=sqrt((a-xb÷a)^2-(x-b)^2)
     }
 }
