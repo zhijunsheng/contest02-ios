@@ -2,6 +2,7 @@ import UIKit
 
 class BoardView: UIView {
     var flag: Int = 1
+    var h1: CGFloat = 45
     
     
     override func draw(_ rect: CGRect) {
@@ -67,57 +68,10 @@ class BoardView: UIView {
         UIColor.black.setStroke()
         rulerLengend.stroke()
         
-//        for i in 0..<10 {
-//            rulerpath.move(to: CGPoint(x: 0, y: 564 - i * 50))
-//            rulerpath.addLine(to: CGPoint(x: 728, y: 564 - i * 50))
-//            rulerpath.stroke()
-//
-//            let compassPath3 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: CGFloat(678 - 564 + i * 50), startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-//            compassPath3.stroke()
-//        }
-//
-//        let answerPointsBox: [CGPoint] = [
-//            CGPoint(x: 702.5, y: 116),
-//            CGPoint(x: 685, y: 167),
-//            CGPoint(x: 669, y: 219),
-//            CGPoint(x: 651, y: 268),
-//            CGPoint(x: 627, y: 313.5),
-//            CGPoint(x: 610.5, y: 365.5),
-//            CGPoint(x: 584, y: 419),
-//            CGPoint(x: 551, y: 469.5),
-//            CGPoint(x: 524.5, y: 517),
-//            CGPoint(x: 478, y: 564),
-//            CGPoint(x: 364, y: 621),
-//            CGPoint(x: 250, y: 564),
-//            CGPoint(x: 210, y: 517),
-//            CGPoint(x: 174, y: 469),
-//            CGPoint(x: 149, y: 419),
-//            CGPoint(x: 125.5, y: 365.5),
-//            CGPoint(x: 102.5, y: 313.5),
-//            CGPoint(x: 90.5, y: 268),
-//            CGPoint(x: 66.5, y: 219),
-//            CGPoint(x: 50, y: 167),
-//            CGPoint(x: 25, y: 110)
-//        ]
-//
-//        for point in answerPointsBox {
-//            let compassPath3 = UIBezierPath(arcCenter: point, radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-//            compassPath3.fill()
-//            compassPath3.stroke()
-//        }
-//
-//        let bowl = UIBezierPath()
-//        for i in 0..<answerPointsBox.count - 1 {
-//            bowl.move(to: answerPointsBox[i])
-//            bowl.addLine(to: answerPointsBox[i + 1])
-//            bowl.stroke()
-//        }
-        
-        let h: CGFloat = 114 // 678 - 564
-        for i in -19..<20 {
+        for i in -49..<50 {
             
-            let x: CGFloat = CGFloat(i) * 25 // 210, 220, 230, ...
-            let r: CGFloat = x * x/(2 * h) + h / 2
+            let x: CGFloat = CGFloat(i) * 10 // 210, 220, 230, ...
+            let r: CGFloat = x * x/(2 * h1) + h1 / 2
             
             #colorLiteral(red: 0.07918231934, green: 0, blue: 0.4650944904, alpha: 1).setFill()
             let answerPointX: CGFloat = bounds.width/2 + x
