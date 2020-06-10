@@ -59,11 +59,13 @@ class BoardView: UIView {
         rulerLengend.move(to: CGPoint(x: 0, y: bounds.height - 50))
         rulerLengend.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 50))
         
-        rulerLengend.move(to: CGPoint(x: 314, y: 514))
-        rulerLengend.addLine(to: CGPoint(x: 414, y: 614))
+        UIBezierPath(arcCenter: CGPoint(x: 364, y: 564), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         
-        rulerLengend.move(to: CGPoint(x: 314, y: 614))
-        rulerLengend.addLine(to: CGPoint(x: 414, y: 514))
+        rulerLengend.move(to: CGPoint(x: 314, y: 678 - h1 - 50))
+        rulerLengend.addLine(to: CGPoint(x: 414, y: 678 - h1 + 50))
+        
+        rulerLengend.move(to: CGPoint(x: 314, y: 678 - h1 + 50))
+        rulerLengend.addLine(to: CGPoint(x: 414, y: 678 - h1 - 50))
         rulerLengend.lineWidth = 5
         UIColor.black.setStroke()
         rulerLengend.stroke()
@@ -85,6 +87,7 @@ class BoardView: UIView {
     func smartSolution8() {
         /*
          r = x^2/(2h) + h/2
+         h = ...
          */
         
         
