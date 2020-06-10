@@ -10,22 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var controlSlider: UISlider!
     @IBOutlet weak var canvasView: CanvasView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        controlSlider.minimumValue = 1
+        controlSlider.maximumValue = 700
     }
     
-    @IBAction func weq(_ sender: Any) {
+    @IBAction func problem1(_ sender: Any) {
         canvasView.flag = 1
         canvasView.setNeedsDisplay()
     }
     
-    @IBAction func acd(_ sender: Any) {
+    @IBAction func problem2(_ sender: Any) {
         canvasView.flag = 2
         canvasView.setNeedsDisplay()
 
+    }
+    
+    @IBAction func moveSlider(_ sender: UISlider) {
+        print(sender.value)
+        canvasView.h = CGFloat(sender.value)
+        canvasView.setNeedsDisplay()
     }
 }
 

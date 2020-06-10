@@ -10,6 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
     var flag = 1
+    var h: CGFloat = 3
     
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -186,10 +187,8 @@ class CanvasView: UIView {
             ee14.fill()
         }
         
-        let h: CGFloat = 100
-        
-        for i in 0..<80 {
-            let b: CGFloat = 0 + CGFloat(i * 10)
+        for i in 0..<120 {
+            let b: CGFloat = 0 + CGFloat(i * 3)
             let a: CGFloat = (b * b - h * h) / (2 * h)
             let y: CGFloat = 400 - a
             UIBezierPath(arcCenter: CGPoint(x: 364 - b , y: y) , radius: 9, startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: false).fill()
