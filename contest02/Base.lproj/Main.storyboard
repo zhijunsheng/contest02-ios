@@ -22,15 +22,28 @@
                                     <constraint firstAttribute="width" secondItem="DLV-Ky-ksv" secondAttribute="height" multiplier="1:1" id="MwW-hs-W8k"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="53G-hu-s0K">
+                                <rect key="frame" x="18" y="756" width="732" height="31"/>
+                                <connections>
+                                    <action selector="mutate01Slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="cBm-s8-QPJ"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="DLV-Ky-ksv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8bX-0G-GM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53G-hu-s0K" secondAttribute="trailing" constant="20" id="B54-KN-3u9"/>
+                            <constraint firstItem="53G-hu-s0K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="J2j-r2-Sdw"/>
                             <constraint firstItem="DLV-Ky-ksv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oZy-nT-do2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DLV-Ky-ksv" secondAttribute="trailing" constant="20" id="v4t-Yr-Tzm"/>
+                            <constraint firstItem="53G-hu-s0K" firstAttribute="top" secondItem="DLV-Ky-ksv" secondAttribute="bottom" constant="8" id="x3O-5K-Wku"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="canvasview" destination="DLV-Ky-ksv" id="WxJ-6y-ebX"/>
+                        <outlet property="option01Slider" destination="53G-hu-s0K" id="veT-Zz-pVg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

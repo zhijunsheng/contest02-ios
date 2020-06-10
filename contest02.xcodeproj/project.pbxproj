@@ -14,6 +14,7 @@
 		73A7F62B246439BD00F6D7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A7F62A246439BD00F6D7BD /* Assets.xcassets */; };
 		73A7F62E246439BD00F6D7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A7F62C246439BD00F6D7BD /* LaunchScreen.storyboard */; };
 		73A7F639246439BD00F6D7BD /* contest02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7F638246439BD00F6D7BD /* contest02Tests.swift */; };
+		82BFB5E5248B2A0E005FC970 /* WhileLoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BFB5E4248B2A0E005FC970 /* WhileLoopTests.swift */; };
 		82DED18A246644F90014A70D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DED189246644F90014A70D /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		73A7F634246439BD00F6D7BD /* contest02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contest02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A7F638246439BD00F6D7BD /* contest02Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contest02Tests.swift; sourceTree = "<group>"; };
 		73A7F63A246439BD00F6D7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BFB5E4248B2A0E005FC970 /* WhileLoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhileLoopTests.swift; sourceTree = "<group>"; };
 		82DED189246644F90014A70D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			children = (
 				73A7F638246439BD00F6D7BD /* contest02Tests.swift */,
 				73A7F63A246439BD00F6D7BD /* Info.plist */,
+				82BFB5E4248B2A0E005FC970 /* WhileLoopTests.swift */,
 			);
 			path = contest02Tests;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A7F639246439BD00F6D7BD /* contest02Tests.swift in Sources */,
+				82BFB5E5248B2A0E005FC970 /* WhileLoopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

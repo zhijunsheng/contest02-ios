@@ -1,23 +1,34 @@
 import UIKit
 class CanvasView: UIView {
+    var h: CGFloat = 10
+    
     override func draw(_ rect: CGRect) {
-//        option1n1()
-        option2n1()
-        option2n2()
-        option2n3()
-        option2n4()
+        option1n1()
+//        option2n1()
+//        option2n2()
+//        option2n3()
+//        option2n4()
     }
     func option1n1() {
         let line1 = UIBezierPath()
-        line1.move(to: CGPoint(x: 182, y: 364))
-        line1.addLine(to: CGPoint(x: 546, y: 364))
+        line1.move(to: CGPoint(x: 182, y: 546))
+        line1.addLine(to: CGPoint(x: 546, y: 546))
         line1.lineWidth = 10
         line1.stroke()
         
-        let point1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: 10, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        let point1 = UIBezierPath(arcCenter: CGPoint(x: 364, y: 546 - h), radius: 10, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         point1.lineWidth = 10
         point1.stroke()
         point1.fill()
+        
+        
+        for i in -30...30 {
+            let x: CGFloat = CGFloat(i * 20)
+            let r: CGFloat = (x * x + h * h) / (2 * h)
+            let answerPointX = 364 - x
+            let answerPointY = 364 - r
+            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY + 182), radius: 10, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
+        }
     }
     /*
     r=(x^2+h^2)÷(2h)
