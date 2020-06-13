@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        controlSlider.minimumValue = 1
-        controlSlider.maximumValue = 700
+        controlSlider.minimumValue = 0
+        controlSlider.maximumValue = 300
+        controlSlider.value = 100
+        canvasView.h = CGFloat(controlSlider.value)
+        canvasView.setNeedsDisplay()
     }
     
     @IBAction func problem1(_ sender: Any) {
