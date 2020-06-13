@@ -3,6 +3,7 @@ import UIKit
 class BoardView: UIView {
     var flag: Int = 1
     var h1: CGFloat = 45
+    var b: CGFloat = 345
     
     
     override func draw(_ rect: CGRect) {
@@ -96,17 +97,17 @@ class BoardView: UIView {
     func challenge9() {
         let lineMovingLength: CGFloat = 628
         let rulerLegend = UIBezierPath()
-        rulerLegend.move(to: CGPoint(x: 314, y: 514))
-        rulerLegend.addLine(to: CGPoint(x: 414, y: 614))
+        rulerLegend.move(to: CGPoint(x: 314, y: 364 + b))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 464 + b))
         
-        rulerLegend.move(to: CGPoint(x: 314, y: 614))
-        rulerLegend.addLine(to: CGPoint(x: 414, y: 514))
+        rulerLegend.move(to: CGPoint(x: 314, y: 464 + b))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 364 + b))
         
-        rulerLegend.move(to: CGPoint(x: 314, y: 214))
-        rulerLegend.addLine(to: CGPoint(x: 414, y: 314))
+        rulerLegend.move(to: CGPoint(x: 314, y: 364 - b))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 464 - b))
         
-        rulerLegend.move(to: CGPoint(x: 314, y: 314))
-        rulerLegend.addLine(to: CGPoint(x: 414, y: 214))
+        rulerLegend.move(to: CGPoint(x: 314, y: 464 - b))
+        rulerLegend.addLine(to: CGPoint(x: 414, y: 364 - b))
         
         rulerLegend.move(to: CGPoint(x: 121.5, y: 678 - lineMovingLength))
         rulerLegend.addLine(to: CGPoint(x: bounds.width - 121.5, y: 678 - lineMovingLength))
@@ -200,19 +201,21 @@ class BoardView: UIView {
         }
         
         let l: CGFloat = lineLength/2
-        let b: CGFloat = 300/2
         
         #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1).setFill()
         for i in 0..<106 {
             let y: CGFloat = -550 + CGFloat(i) * 20
             let a: CGFloat = (l - y * b/l)
             let A: CGFloat = (y - b)
-            let x: CGFloat = sqrt(a * a - A * A)
-            let Y: CGFloat = 414 + y
-            let rPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-            rPoint.fill()
-            let lPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 - x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-            lPoint.fill()
+            if abs(a) >= abs(A) { //  -2, -5 abs(a) >= abs(A)
+                let x: CGFloat = sqrt(a * a - A * A)
+                let Y: CGFloat = 414 + y
+                let rPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 + x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+                rPoint.fill()
+                let lPoint = UIBezierPath(arcCenter: CGPoint(x: bounds.width / 2 - x, y: Y), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+                lPoint.fill()
+            }
+            
         }
         
         let bPoint = UIBezierPath(arcCenter: CGPoint(x: 364, y: 564 + (lineLength - 300)/2), radius: 10, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)

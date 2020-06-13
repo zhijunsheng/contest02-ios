@@ -7,23 +7,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        boardSlider.minimumValue = 10
-        boardSlider.maximumValue = 209
     }
 
     @IBAction func showOption2(_ sender: Any) {
+        boardSlider.minimumValue = 0
+        boardSlider.maximumValue = 200
         boardView.flag = 2
         boardView.setNeedsDisplay()
     }
     
     @IBAction func showOption1(_ sender: Any) {
+        boardSlider.minimumValue = 10
+        boardSlider.maximumValue = 209
         boardView.flag = 1
         boardView.setNeedsDisplay()
     }
     
     @IBAction func moveSlider(_ sender: UISlider) {
-        boardView.h1 = CGFloat(sender.value)
+        if boardView.flag == 1 {
+            boardView.h1 = CGFloat(sender.value)
+        } else if boardView.flag == 2 {
+            boardView.b = CGFloat(sender.value)
+        } else {
+            // My iPad  is 8%
+        }
+        
         boardView.setNeedsDisplay()
     }
 }
