@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
     var a:Int = -1
-    var h: CGFloat = 100
+    var h: CGFloat = 200
     
     override func draw(_ rect: CGRect) {
         
@@ -32,7 +32,7 @@ class CanvasView: UIView {
         line.addLine(to: CGPoint(x: 600, y: 700))
         line.stroke()
         
-        let point = UIBezierPath(arcCenter: CGPoint(x: 400, y: 600), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
+        let point = UIBezierPath(arcCenter: CGPoint(x: 400, y: 700 - h), radius: 5, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
         point.fill()
         
         
