@@ -9,17 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var parabolaSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        parabolaSlider.maximumValue = 200
+        parabolaSlider.minimumValue = 0
     }
-    
-    
-    
-    @IBOutlet weak var canvasView: CanvasView!
-    
     
     @IBAction func contest021(_ sender: UIButton) {
         canvasView.a = 1
@@ -36,6 +35,11 @@ class ViewController: UIViewController {
         canvasView.setNeedsDisplay()
     }
     
+    @IBAction func sliderMoved(_ sender: UISlider) {
+        canvasView.h = CGFloat(sender.value)
+        canvasView.setNeedsDisplay()
+        print("\(sender.value)")
+    }
     
     
     
