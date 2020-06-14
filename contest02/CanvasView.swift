@@ -1,13 +1,13 @@
 import UIKit
 class CanvasView: UIView {
     var h: CGFloat = 10
-    
+    var b: CGFloat = 92
     override func draw(_ rect: CGRect) {
-        option1n1()
-//        option2n1()
-//        option2n2()
-//        option2n3()
-//        option2n4()
+//        option1n1()
+        option2n1()
+        option2n2()
+        option2n3()
+        option2n4()
     }
     func option1n1() {
         let line1 = UIBezierPath()
@@ -189,30 +189,25 @@ class CanvasView: UIView {
     }
     func option2n4() {
         let a: CGFloat = 182
-        let b: CGFloat = 92
-        for i in -20...20 {
+        
+        for i in -60...60 {
             let x: CGFloat = CGFloat(i * 15)
             let m: CGFloat = a-x*b/a
             let n: CGFloat = x-b
             let y: CGFloat = sqrt(m*m-n*n)
             let answerPointX: CGFloat = x+364 // add r 0,182,364,546,728
             let answerPointY: CGFloat = 364-y-100
-            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 10, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true).fill()
+            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 5, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true).fill()
         }
-        for i in -20...20 {
+        for i in -60...60 {
             let x: CGFloat = CGFloat(i * 15)
             let m: CGFloat = a-x*b/a
             let n: CGFloat = x-b
             let y: CGFloat = sqrt(m*m-n*n)
             let answerPointX: CGFloat = x+364 // add r 0,182,364,546,728
             let answerPointY: CGFloat = 264+y
-            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 10, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true).fill()
+            UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 5, startAngle: 0, endAngle: CGFloat.pi*2, clockwise: true).fill()
         }
-        // 150，160，
-        UIBezierPath(arcCenter: CGPoint(x: 364, y: 264), radius: 15, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).fill()
-        
-        
-        
-        //y=sqrt((a-xb÷a)^2-(x-b)^2)
+        // 150，160，y=sqrt((a-xb÷a)^2-(x-b)^2)
     }
 }
