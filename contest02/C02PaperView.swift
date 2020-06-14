@@ -9,8 +9,8 @@
 import UIKit
 
 class C02PaperView: UIView {
-    var pageNum = 0
-    
+    var pageNum: Int = 0
+    var h: CGFloat = 0
     override func draw(_ rect: CGRect) {
         if pageNum == 0 {
             contest02Q1_1()
@@ -45,13 +45,12 @@ class C02PaperView: UIView {
     
     func contest02Q1_1() {
         let rulerLine = UIBezierPath()
-        let h: CGFloat = 50
         rulerLine.move(to: CGPoint(x: 100, y: 600))
         rulerLine.addLine(to: CGPoint(x: bounds.width - 100, y: 600))
-        let qPoint = UIBezierPath(arcCenter: CGPoint(x: 350, y: 550), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let qPoint = UIBezierPath(arcCenter: CGPoint(x: 350, y: 600 - h), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         qPoint.fill()
-        for i in -35...40 {
-            let x = 10 * CGFloat(i)
+        for i in -100...100 {
+            let x = 5 * CGFloat(i)
             let y: CGFloat = (x * x + h * h) / (2 * h)
             let ansPoint = UIBezierPath(arcCenter: CGPoint(x: 350 + x, y: 600 - y), radius: 2, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
             ansPoint.fill()

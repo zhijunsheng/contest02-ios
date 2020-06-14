@@ -36,6 +36,13 @@
                                     <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="KVq-2y-D7d"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="rA0-c1-6Bg">
+                                <rect key="frame" x="18" y="803" width="732" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderSlided:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zrq-7D-80e"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.71251605308219179" green="0.49114404965753422" blue="0.25684931506849318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.71251605309999999" green="0.49114404969999997" blue="0.25684931509999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,6 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="paperView" destination="lfL-Vz-djq" id="Sdp-tc-ddE"/>
+                        <outlet property="varSlider" destination="rA0-c1-6Bg" id="utJ-NK-XvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

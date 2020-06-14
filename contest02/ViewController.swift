@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var paperView: C02PaperView!
+    @IBOutlet var varSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +24,9 @@ class ViewController: UIViewController {
         paperView.setNeedsDisplay()
     }
 
+    @IBAction func sliderSlided(_ sender: UISlider) {
+        paperView.h = CGFloat(sender.value)
+        paperView.setNeedsDisplay()
+    }
 }
 
