@@ -11,7 +11,7 @@ import UIKit
 class CanvasView: UIView {
 
     var flag: Problems = Problems.problem1
-    var g: CGFloat = 100
+    var g: CGFloat = 150
     
     override func draw(_ rect: CGRect) {
         switch flag {
@@ -35,23 +35,20 @@ class CanvasView: UIView {
         pen.move(to: CGPoint(x: 0, y: 650))
         pen.addLine(to: CGPoint(x: 1000, y: 650))
         
-        pen.move(to: CGPoint(x: 320, y: 540))
-        pen.addLine(to: CGPoint(x: 340, y: 560))
-        pen.move(to: CGPoint(x: 340, y: 540))
-        pen.addLine(to: CGPoint(x: 320, y: 560))
-        
+        mark(x: 330, y: 650 - g, color: .black)
+
         pen.lineWidth = 3
         pen.stroke()
         
         #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
         
         for i in 0..<150 {
-            let a: CGFloat = distance * CGFloat(i) - g / 2
+            let a: CGFloat = -g / 2 + distance * CGFloat(i)
             let c: CGFloat = g + a
             let b: CGFloat = sqrt(c * c - a * a)
 
-            dot(x: 330 - b, y: 550 - a, color: .blue)
-            dot(x: 330 + b, y: 550 - a, color: .blue)
+            dot(x: 330 - b, y: 650 - g - a, color: .blue)
+            dot(x: 330 + b, y: 650 - g - a, color: .blue)
         }
     }
     
