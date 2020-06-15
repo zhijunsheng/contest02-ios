@@ -12,10 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var canvasView: CanvasView!
     
+    @IBOutlet weak var problem1Slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        problem1Slider.minimumValue = 0
+        problem1Slider.maximumValue = 200
+        problem1Slider.value = 100
     }
 
     @IBAction func problem1(_ sender: Any) {
@@ -28,6 +31,14 @@ class ViewController: UIViewController {
         canvasView.flag = .problem2
         canvasView.setNeedsDisplay()
     }
+    
+    
+    @IBAction func moveSlider(_ sender: UISlider) {
+        print(sender.value)
+        canvasView.g = CGFloat(sender.value)
+        canvasView.setNeedsDisplay()
+    }
+    
     
     
 }

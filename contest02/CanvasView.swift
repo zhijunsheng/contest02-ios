@@ -10,8 +10,9 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag: Problems = Problems.problem2
-
+    var flag: Problems = Problems.problem1
+    var g: CGFloat = 100
+    
     override func draw(_ rect: CGRect) {
         switch flag {
         case .problem1:
@@ -27,12 +28,9 @@ class CanvasView: UIView {
         print("\(fingerLocation.x), \(fingerLocation.y)")
     }
     
-    
     func question1() {
         let pen = UIBezierPath()
-        let parallel = UIBezierPath()
-        let compass = UIBezierPath()
-        let distance: CGFloat = 30
+        let distance: CGFloat = 3
 
         pen.move(to: CGPoint(x: 0, y: 650))
         pen.addLine(to: CGPoint(x: 1000, y: 650))
@@ -47,25 +45,13 @@ class CanvasView: UIView {
         
         #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
         
-        
-        for i in -4..<13 {
-//        let i = 1
-        
-            parallel.move(to: CGPoint(x: 0, y: 520 - distance * CGFloat(i)))
-            parallel.addLine(to: CGPoint(x: 1000, y: 520 - distance * CGFloat(i)))
-
-            parallel.lineWidth = 1
-            parallel.stroke()
-
-            compass.addArc(withCenter: CGPoint(x: 330, y: 550), radius: 145 + distance * CGFloat(i), startAngle: 0 * CGFloat.pi, endAngle: 2 * CGFloat.pi, clockwise: true)
-            compass.stroke()
-
-            let c: CGFloat = 145 + distance * CGFloat(i)
-            let a: CGFloat = distance * CGFloat(i + 1)
+        for i in 0..<150 {
+            let a: CGFloat = distance * CGFloat(i) - g / 2
+            let c: CGFloat = g + a
             let b: CGFloat = sqrt(c * c - a * a)
 
-            mark(x: 330 - b, y: 520 - distance * CGFloat(i), color: .blue)
-            mark(x: 330 + b, y: 520 - distance * CGFloat(i), color: .blue)
+            dot(x: 330 - b, y: 550 - a, color: .blue)
+            dot(x: 330 + b, y: 550 - a, color: .blue)
         }
     }
     
@@ -98,10 +84,8 @@ class CanvasView: UIView {
         
         mark(x: 500, y: 500, color: .red)
         mark(x: 200, y: 500, color: .red)
-        
     }
-    
-    
+
     func mark(x: CGFloat, y: CGFloat, color: UIColor) {
         let pen = UIBezierPath()
         pen.move(to: CGPoint(x: x - 10, y: y - 10))
@@ -115,7 +99,13 @@ class CanvasView: UIView {
         pen.stroke()
     }
     
-    
+    func dot(x: CGFloat, y: CGFloat, color: UIColor) {
+        let pen = UIBezierPath()
+        
+        pen.addArc(withCenter: CGPoint(x: x, y: y), radius: 3, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        color.setFill()
+        pen.fill()
+    }
 }
 
 
