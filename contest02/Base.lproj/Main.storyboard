@@ -44,6 +44,13 @@
                                     <action selector="showProblem2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BrY-uo-dLF"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="350" translatesAutoresizingMaskIntoConstraints="NO" id="AGZ-3T-Guv">
+                                <rect key="frame" x="18" y="897" width="732" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="7U6-tZ-EeE"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

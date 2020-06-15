@@ -28,5 +28,15 @@ class ViewController: UIViewController {
         boardView.flag = 2
         boardView.setNeedsDisplay()
     }
+    
+    
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        // h 100 -> 51, 52
+        boardView.h = CGFloat(sender.value)
+        boardView.setNeedsDisplay()
+        print("\(sender.value)")
+    }
 }
+
+
 

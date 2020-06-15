@@ -11,7 +11,7 @@ import UIKit
 class BoardView: UIView {
     
     var flag = 1
-
+    var h: CGFloat = 100
 
     override func draw(_ rect: CGRect) {
         if flag == 1 {
@@ -22,7 +22,6 @@ class BoardView: UIView {
     }
     
     func drawProblem1() {
-
         
         let line = UIBezierPath()
         line.move(to: CGPoint(x: 150, y: 650))
@@ -30,7 +29,8 @@ class BoardView: UIView {
         line.lineWidth = 3
         line.stroke()
         
-        UIBezierPath(arcCenter: CGPoint(x: 360, y: 550), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
+        
+        UIBezierPath(arcCenter: CGPoint(x: 360, y: 650 - h), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
        
         #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).setFill()
         UIBezierPath(arcCenter: CGPoint(x: 360 + 100, y: 550), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
@@ -123,7 +123,7 @@ class BoardView: UIView {
         
         UIBezierPath(arcCenter: CGPoint(x: 662, y: 138), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         
-        let h: CGFloat = 100
+    // 50 ~ 250
         var r: CGFloat
         var x: CGFloat = 200
         var answerPointX: CGFloat = 10
@@ -131,42 +131,17 @@ class BoardView: UIView {
         
         #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setFill()
         
-//        r = (x * x + h * h) / (2 * h)
-//        answerPointX = 360 + x
-//        answerPointY = 650 - r
-//        UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
-//
-//        x = 210
-//        r = (x * x + h * h) / (2 * h)
-//        answerPointX = 360 + x
-//        answerPointY = 650 - r
-//        UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
-//
-//        x = 220
-//        r = (x * x + h * h) / (2 * h)
-//        answerPointX = 360 + x
-//        answerPointY = 650 - r
-//        UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
-        
-        /*
-         i -> ?
-         0 -> 200
-         1 -> 210
-         2 -> 220
-         ...
-         */
-        for i in 0..<14 {
-            x = 50 + CGFloat(i) * 10
+        for i in 0..<50 {
+            x = 0 + CGFloat(i) * 10
             r = (x * x + h * h) / (2 * h)
             answerPointX = 360 + x
             answerPointY = 650 - r
             UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
-            
+
             answerPointX = 360 - x
             UIBezierPath(arcCenter: CGPoint(x: answerPointX, y: answerPointY), radius: 6, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true).fill()
         }
     }
-    
      
     func drawProblem2() {
         let line = UIBezierPath()
@@ -222,8 +197,5 @@ class BoardView: UIView {
          let first = touches.first!
          let fingerLocation = first.location(in: self)
          print("\(fingerLocation.x)       \(fingerLocation.y)")
-     }
-    
-
+    }
 }
-
