@@ -10,9 +10,9 @@ import UIKit
 
 class CanvasView: UIView {
 
-    var flag: Problems = Problems.problem1
+    var flag: Problems = Problems.problem2
     var g: CGFloat = 150
-    
+    var h: CGFloat = 200
     override func draw(_ rect: CGRect) {
         switch flag {
         case .problem1:
@@ -42,7 +42,7 @@ class CanvasView: UIView {
         
         #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1).setStroke()
         
-        for i in 0..<150 {
+        for i in 0..<300 {
             let a: CGFloat = -g / 2 + distance * CGFloat(i)
             let c: CGFloat = g + a
             let b: CGFloat = sqrt(c * c - a * a)
@@ -54,14 +54,14 @@ class CanvasView: UIView {
     
     func question2() {
         let pen = UIBezierPath()
-        let a: CGFloat = 150
-        let b: CGFloat = 100
+        let a: CGFloat = h / 2 // 150
+        let b: CGFloat = 150  // h / 2
         
-        mark(x: 250, y: 500, color: .blue)
-        mark(x: 450, y: 500, color: .blue)
+        mark(x: 350 - b, y: 500, color: .blue)
+        mark(x: 350 + b, y: 500, color: .blue)
         
         pen.move(to: CGPoint(x: 100, y: 100))
-        pen.addLine(to: CGPoint(x: 400, y: 100))
+        pen.addLine(to: CGPoint(x: 100 + 2 * a, y: 100))
         
         #colorLiteral(red: 0.1037014052, green: 0.04392455518, blue: 0.04877308756, alpha: 1).setStroke()
         pen.stroke()
@@ -72,15 +72,15 @@ class CanvasView: UIView {
             let n: CGFloat = x - b
             let y: CGFloat = sqrt(m * m - n * n)
             
-            mark(x: 350 + x, y: 500 - y, color: .red)
-            mark(x: 350 - x, y: 500 - y, color: .red)
+            dot(x: 350 + x, y: 500 - y, color: .red)
+            dot(x: 350 - x, y: 500 - y, color: .red)
             
-            mark(x: 350 + x, y: 500 + y, color: .red)
-            mark(x: 350 - x, y: 500 + y, color: .red)
+            dot(x: 350 + x, y: 500 + y, color: .red)
+            dot(x: 350 - x, y: 500 + y, color: .red)
         }
         
-        mark(x: 500, y: 500, color: .red)
-        mark(x: 200, y: 500, color: .red)
+//        dot(x: 350 - b - b / 2, y: 500, color: .red)
+//        dot(x: 350 + b + b / 2, y: 500, color: .red)
     }
 
     func mark(x: CGFloat, y: CGFloat, color: UIColor) {

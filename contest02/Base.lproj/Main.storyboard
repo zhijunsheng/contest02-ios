@@ -54,6 +54,13 @@
                                     <action selector="moveSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="l5e-2d-vbM"/>
                                 </connections>
                             </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gmz-UO-fjo">
+                                <rect key="frame" x="18" y="957" width="732" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="moveSlider2:" destination="BYZ-38-t0r" eventType="valueChanged" id="OT4-sC-qkM"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.41525635659999999" green="0.79215024609999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,6 +73,7 @@
                     <connections>
                         <outlet property="canvasView" destination="arC-HU-dWM" id="A2r-m8-qlK"/>
                         <outlet property="problem1Slider" destination="TSS-wI-hYm" id="XLL-xc-aJZ"/>
+                        <outlet property="problem2Slider" destination="gmz-UO-fjo" id="YhK-NF-VUV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
